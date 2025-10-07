@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Uvod spa</title>
+</head>
+<body>
+    
+    <button id="mode-toggle">Light Mode</button>
+    <h2>Uvod u strukture podataka i algoritme</h2>
+    <p>
+        We need to organise data and memory in order to make it easy to filter and search through it.
+        Therefore organising a dictionary is completely different from organising MAP data(i.p geolocations) or financial data.
+    </p>
+    <h2>Structures</h2>
+    <p>
+        Discussed in two ways: <br>
+        -logical/mathematical model:
+        Abstract data types(no implementation details) also called ADT.
+        Implementation:
+        Discusses techniques on how to implement an ADT, because a single ADT can have multiple implementations.
+        We will learn the cost of every implementation type.
+    </p>
+    <h2>LIST:</h2>
+    <p>
+        List is a collection of objects of same type.
+        Functions:
+    </p>
+    <ul class="lista">
+        <li>
+            Store a number of elements of the same type.
+        </li>
+        <li>
+            Write at a posotion
+        </li>
+        <li>
+            Modify at position
+        </li>
+        <li>
+            Read at a position
+        </li>
+        <li>Insert</li>
+        <li>Remove</li>
+    </ul>
+    <p>
+        Example of list is an array. <br>
+        Array implementation:
+    </p>
+    <ul class="lista">
+        <li>
+            Define array size
+        </li>
+        <li>Insert at x position (Insertion may cause shifting all elements in the array)</li>
+        <li>
+            If array gets larger than the predefined size, create new with old array size x2 (double the size of the original one).
+            Copy old array into new one. Delete old.
+        </li>
+    </ul>
+    <p>
+        Linked list implementation: <br>
+        -as opposing to arrays, linked lists contain a list of elements where every element points to the next.
+    </p>
+    <p>
+        Double linked lists <br>
+        Sometimes linked lists come in a different flavour where elements point to next and to previous elements enabling reverse lookup.
+        It uses extra memory for the additional pointer(because double linked lists point to previous elements),
+    </p>
+    <img src="images/Linked-list.webp">
+    <p>
+        Mozda je ovaj dio nebitan: <br>
+        a[1] -> u starim jezicima je znacilo daj mi element na poziciji 1 i to je bio ujedno prvi element. <br>
+        a[0] -> se koristi u novijim jezicima i znaci offset from start, odnosno udaljenost od prvog, 0 označava da nema udaljenosti od prvog elementa, isto tako 1 oznacava pomak za 1 element...
+    </p>
+    <p>
+        Upoređivanje arrays sa linked listama.
+    </p>
+   <table class="custom-table">
+    <tr>
+        <td>Arrays</td>
+        <td>Linked list</td>
+    </tr>
+    <tr>
+        <td>constant time access(u značenju da je uvijek isto vrijeme pristupa elementu <br> u nizu bez obzira da li to bio prvi ili hiljaditi element)</td>
+        <td>depends on the number of elements</td>
+    </tr>
+    <tr>
+        <td>Fixed size memory usage(possible memory loss)</td>
+        <td>No wasted memory</td>
+    </tr>
+    <tr>
+        <td>memory might not be available in one block</td>
+        <td>NO need to set collection size</td>
+    </tr>
+    <tr>
+        <td>Highher cost of insertion</td>
+        <td>Lower cost of inserting an element</td>
+    </tr>
+</table>
+<br>
+<br>
+    <img src="images/linked list n array.jpeg" width=500px></img>
+    <p>
+        Sliku sam nasao s interneta,jer ne znam crtat.
+        Uglavnom slika predstavlja način na koji se arrays and linked list pohranjuju u memoriju. Kao što možemo vidjeti array zahtijeva cijeli blok memorije
+        to jest mora biti u komadu, dok linked list može biti na različitim mjestima jer svakako svaki član pokaziva na onog sljedećeg.
+    </p>
+     <div class="bottom-arrows">
+        <span class="arrow" onclick="vrati(1)" id="prev">&lt;</span>
+        <span class="arrow" onclick="dalje(1)" id="next">&gt;</span>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
